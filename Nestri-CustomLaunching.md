@@ -42,12 +42,13 @@ It is actual pretty simple to manually launch a app.
   `su - nestri`
   `source /etc/nestri/envs.sh`
 - Then you much kill all GameScope instances and entry point instances.
-  `pkill -9 -f entrypoint.sh && pkill -9 -f entrypoint_nestri.sh && pkill -9 -f gamescope`
+  `sudo pkill -9 -f entrypoint.sh && pkill -9 -f entrypoint_nestri.sh && pkill -9 -f gamescope`
   The -9 will send a SIGKILL signal which will force kill the app.
 - After that double check to make sure they still aren't running.
 ```
+ps aux | grep -i '[e]ntrypoint.sh'
+ps aux | grep -i '[e]ntrypoint_nestri.sh'
 ps aux | grep -i '[g]amescope'
-ps aux | grep -i '[s]team'
 ```
 - finally then run your app by settings the Wayland display and running your app under gamescope  
 ```

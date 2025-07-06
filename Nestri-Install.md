@@ -131,4 +131,3 @@ http://10.4.9.119:5173/play/gametest?peerURL=`/ip4/10.4.9.119/tcp/8088/ws/p2p/12
   In the default commands I gave you for running the `relay` and `nestri` it included `-d` this will make the podman containers run in the background were you manually have to do `podman logs {podman container}` to see the logs.
 ****
 Hopefully you will be able to get to something like this :D
-![[Pasted image 20250706125221.png]]

@@ -58,4 +58,6 @@ export DISPLAY=:2
 WAYLAND_DISPLAY=wayland-1 gamescope --backend wayland --force-grab-cursor -g -f --rt --mangoapp -W 1920 -H 1080 -r 60 -e -- steam-native -tenfoot -cef-force-gpu
 ```
   - Currently this command will open `steam-native` using `-tenfoot` which will open it in steam big picture.
+- Important note:
+  I found most apps just don't wanna work with `-e` don't ask why but it just only works with steam as far as i know. So just remove -e if your app isn't launching.
 ****

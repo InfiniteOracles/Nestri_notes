@@ -40,6 +40,7 @@ It is actual pretty simple to manually launch a app.
 - First go into the nestri user after going into the bash of the podman container
   `podman exec -it nestri /bin/bash`
   `su - nestri`
+  `source /etc/nestri/envs.sh`
 - Then you much kill all GameScope instances and steam instances.
   `pkill -9 -f gamescope && pkill -9 -f steam
   The -9 will send a SIGKILL signal which will force kill the app.

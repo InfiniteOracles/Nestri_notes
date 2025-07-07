@@ -42,15 +42,22 @@ It is actual pretty simple to manually launch a app.
   `su - nestri`
   `source /etc/nestri/envs.sh`
 - Then you much kill all GameScope instances and entry point instances.
-  `sudo pkill -9 -f entrypoint.sh && pkill -9 -f entrypoint_nestri.sh && pkill -9 -f gamescope`
+```
+sudo pkill -9 -f entrypoint.sh  
+sudo pkill -9 -f entrypoint_nestri.sh
+sudo pkill -9 -f gamescope
+```
   The -9 will send a SIGKILL signal which will force kill the app.
 - After that double check to make sure they still aren't running.
 ```
+
 ps aux | grep -i '[e]ntrypoint.sh'
 ps aux | grep -i '[e]ntrypoint_nestri.sh'
 ps aux | grep -i '[g]amescope'
 ```
-- finally then run your app by settings the Wayland display and running your app under gamescope  
+
+- Finally run your app by settings the Wayland display and running your app under gamescope.
+
 ```
 env
 ls -la /tmp/.X11-unix
@@ -59,5 +66,5 @@ WAYLAND_DISPLAY=wayland-1 gamescope --backend wayland --force-grab-cursor -g -f 
 ```
   - Currently this command will open `steam-native` using `-tenfoot` which will open it in steam big picture.
 - Important note:
-  I found most apps just don't wanna work with `-e` don't ask why but it just only works with steam as far as i know. So just remove -e if your app isn't launching.
+  I found most apps just don't wanna work with `-e` don't ask why but it just only works with steam as far as i know. So just remove -e if your app shows a black screen/doesn't launch.
 ****

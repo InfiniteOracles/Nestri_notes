@@ -109,7 +109,7 @@ Final URL:
 
 Example: 
 ```
-http://10.4.9.119:5173/play/gametest?peerURL=`/ip4/10.4.9.119/tcp/8088/ws/p2p/12D3KooWGKW62k9cPYvHiHBeMyUTPLTZaaasEqUimtskfqXhNfsK
+http://10.4.9.119:5173/play/gametest?peerURL=/ip4/10.4.9.119/tcp/8088/ws/p2p/12D3KooWGKW62k9cPYvHiHBeMyUTPLTZaaasEqUimtskfqXhNfsK
 ```
 ****
 **Extra Commands:**
